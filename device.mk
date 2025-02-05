@@ -6,19 +6,18 @@ LOCAL_PATH := device/samsung/treltexx
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.modem.rc
+    init.baseband.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
+    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/vendor/etc/mixer_paths_0.xml
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/vendor/etc/bluetooth/bt_vendor.conf		
 
-# Root
-PRODUCT_PACKAGES += \
-    su	
+# Inherit from trelte-common
+$(call inherit-product, device/samsung/trelte-common/device-common.mk)	
 	
 # Call the proprietary setup
-$(call inherit-product-if-exists, vendor/samsung/treltexx/treltexx-vendor.mk)
+$(call inherit-product, vendor/samsung/treltexx/treltexx-vendor.mk)
