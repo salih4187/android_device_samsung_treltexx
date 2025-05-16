@@ -14,23 +14,17 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 # Inherit device configuration
-$(call inherit-product, device/samsung/treltexx/device.mk)
+$(call inherit-product, device/samsung/trelte/device.mk)
+$(call inherit-product, device/samsung/trelte-common/device-common.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit more LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/telephony.mk)
-
-# Device identifier. This must come after all inclusions
+# Device identifier
 PRODUCT_NAME := lineage_treltexx
-PRODUCT_DEVICE := treltexx
+PRODUCT_DEVICE := trelte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N910C
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-BOARD_VENDOR := samsung

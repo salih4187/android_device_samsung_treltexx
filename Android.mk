@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter treltexx, $(TARGET_DEVICE)),)
+ifneq ($(filter trelte tre3g, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
