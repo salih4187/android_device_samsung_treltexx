@@ -308,6 +308,7 @@
         <ctl name="LHPF1 Input 1 Volume" value="32" />
         <ctl name="IN1R Digital Volume" value="180" />
     </path>
+    
 	<!--Calls mic gain-->
     <path name="main-mic-voice">
         <ctl name="IN1R Volume" value="27" />
@@ -339,6 +340,7 @@
     <path name="second-mic-normal">
         <ctl name="IN3L Digital Volume" value="160" />
     </path>
+    
 	<!--Calls mic gain-->
     <path name="second-mic-voice">
         <ctl name="IN3L Digital Volume" value="126" />
@@ -610,8 +612,8 @@
     </path>
 
     <path name="speaker-mic">
-        <path name="main-mic" />
-        <path name="main-mic-voice" />
+        <path name="second-mic" />
+        <path name="second-mic-voice" />
     </path>
 
     <path name="voice-mic">
@@ -642,8 +644,8 @@
     </path>
 
     <path name="voice-speaker-mic">
-        <path name="main-mic" />
-        <path name="main-mic-voice" />
+        <path name="second-mic" />
+        <path name="second-mic-voice" />
     </path>
 
     <path name="voice-speaker-mic-wb">
